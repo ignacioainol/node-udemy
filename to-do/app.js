@@ -9,8 +9,15 @@ switch (comando) {
         console.log(tarea);
     break;
 
-    case 'actualizar':
-        console.log("Updating a task");
+    case 'listar':
+        let listado = porHacer.getListado();
+
+        for(let tarea of listado){
+            console.log('========por hacer==========');
+            console.log('Tarea: ', tarea.descripcion);
+            console.log('Estado: ', tarea.completado);
+            console.log('===========================');
+        }
     break;
 
     default:
